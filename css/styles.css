@@ -52,11 +52,6 @@ footer {
 }
 
 .header {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236, 236, 236);
     background-color:rgb(25, 25, 25);
     display: flex;
     align-items: center;
@@ -66,10 +61,13 @@ footer {
 }
 
 .header img {
-    max-width: 5%;
-    max-height: 5%;
     padding-left: 50px;
     padding-right: 20px;
+}
+
+.logo {
+    max-width: 5%;
+    max-height: 5%;
 }
 
 .header ul {
@@ -82,12 +80,20 @@ footer {
 }
 
 .header a {
-    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
     font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(236, 236, 236);
+    text-decoration: none;
     line-height: 24px;
     text-align: left;
     color: #FFFFFF;
     padding-right: 40px;
+}
+
+.menu {
+    display: none;
 }
 
 .meter {
@@ -101,4 +107,26 @@ footer {
     height: 20px;
     background-color: gray;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        padding: 5px;
+    }
+    .header ul {
+        display: none;
+    }
+    .header nav {
+        justify-content: flex-end;
+        padding: 0px;
+    }
+    .header a {
+        padding: 0px;
+    }
+    .header img { 
+        padding: 10px 10px 10px 10px;
+    }
+    .menu {
+        display: flex;
+    }
 }
